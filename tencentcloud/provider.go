@@ -3,6 +3,8 @@ package tencentcloud
 import (
 	"encoding/json"
 	"fmt"
+	taascls "github.com/tencentcloudstack/terraform-provider-tencentcloud/tencentcloud/services/taas/cluster"
+	taasrh "github.com/tencentcloudstack/terraform-provider-tencentcloud/tencentcloud/services/taas/resulthouse"
 	"io/ioutil"
 	"net/url"
 	"os"
@@ -1947,6 +1949,8 @@ func Provider() *schema.Provider {
 			"tencentcloud_vpc_peer_connect_manager":                            vpc.ResourceTencentCloudVpcPeerConnectManager(),
 			"tencentcloud_vpc_peer_connect_accept_operation":                   vpc.ResourceTencentCloudVpcPeerConnectAcceptOperation(),
 			"tencentcloud_vpc_peer_connect_reject_operation":                   vpc.ResourceTencentCloudVpcPeerConnectRejectOperation(),
+			"tencentcloud_taas_rh_instance":                                    taasrh.ResourceTencentCloudTaasRHInstance(),
+			"tencentcloud_taas_cluster":                                        taascls.ResourceTencentCloudTaasCluster(),
 		},
 
 		ConfigureFunc: providerConfigure,
