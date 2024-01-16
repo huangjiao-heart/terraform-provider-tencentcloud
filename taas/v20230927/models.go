@@ -15,9 +15,9 @@
 package v20230927
 
 import (
-    tcerr "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/errors"
-    tchttp "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/http"
-    "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/json"
+	tcerr "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/errors"
+	tchttp "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/http"
+	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/json"
 )
 
 type AssociatedRHInstance struct {
@@ -91,7 +91,7 @@ type CreateClusterRequestParams struct {
 
 type CreateClusterRequest struct {
 	*tchttp.BaseRequest
-	
+
 	// associatedRHInstance 关联的 ResultHouse 实例信息
 	AssociatedRHInstance *AssociatedRHInstance `json:"AssociatedRHInstance,omitnil" name:"AssociatedRHInstance"`
 
@@ -118,8 +118,8 @@ type CreateClusterRequest struct {
 }
 
 func (r *CreateClusterRequest) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -169,8 +169,8 @@ type CreateClusterResponse struct {
 }
 
 func (r *CreateClusterResponse) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -217,7 +217,7 @@ type CreateRHInstanceRequestParams struct {
 
 type CreateRHInstanceRequest struct {
 	*tchttp.BaseRequest
-	
+
 	// autoVoucher
 	AutoVoucher *bool `json:"AutoVoucher,omitnil" name:"AutoVoucher"`
 
@@ -253,8 +253,8 @@ type CreateRHInstanceRequest struct {
 }
 
 func (r *CreateRHInstanceRequest) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -307,8 +307,8 @@ type CreateRHInstanceResponse struct {
 }
 
 func (r *CreateRHInstanceResponse) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -325,14 +325,14 @@ type DeleteClusterRequestParams struct {
 
 type DeleteClusterRequest struct {
 	*tchttp.BaseRequest
-	
+
 	// clusterId 集群 ID 唯一ID
 	ClusterId *string `json:"ClusterId,omitnil" name:"ClusterId"`
 }
 
 func (r *DeleteClusterRequest) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -367,8 +367,8 @@ type DeleteClusterResponse struct {
 }
 
 func (r *DeleteClusterResponse) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -385,14 +385,14 @@ type DeleteRHInstanceRequestParams struct {
 
 type DeleteRHInstanceRequest struct {
 	*tchttp.BaseRequest
-	
+
 	// instanceId  唯一ID
 	InstanceId *string `json:"InstanceId,omitnil" name:"InstanceId"`
 }
 
 func (r *DeleteRHInstanceRequest) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -427,8 +427,8 @@ type DeleteRHInstanceResponse struct {
 }
 
 func (r *DeleteRHInstanceResponse) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -454,7 +454,7 @@ type DescribeClustersRequestParams struct {
 
 type DescribeClustersRequest struct {
 	*tchttp.BaseRequest
-	
+
 	// clusterId 集群 ID 唯一ID
 	ClusterIdList []*string `json:"ClusterIdList,omitnil" name:"ClusterIdList"`
 
@@ -469,8 +469,8 @@ type DescribeClustersRequest struct {
 }
 
 func (r *DescribeClustersRequest) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -516,8 +516,8 @@ type DescribeClustersResponse struct {
 }
 
 func (r *DescribeClustersResponse) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -543,7 +543,7 @@ type DescribeRHInstancesRequestParams struct {
 
 type DescribeRHInstancesRequest struct {
 	*tchttp.BaseRequest
-	
+
 	// 过滤条件
 	Filters []*RHInstanceFilter `json:"Filters,omitnil" name:"Filters"`
 
@@ -558,8 +558,8 @@ type DescribeRHInstancesRequest struct {
 }
 
 func (r *DescribeRHInstancesRequest) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -605,8 +605,8 @@ type DescribeRHInstancesResponse struct {
 }
 
 func (r *DescribeRHInstancesResponse) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -644,7 +644,7 @@ type ModifyClusterAttributesRequestParams struct {
 
 type ModifyClusterAttributesRequest struct {
 	*tchttp.BaseRequest
-	
+
 	// associatedRHInstance
 	AssociatedRHInstance *AssociatedRHInstance `json:"AssociatedRHInstance,omitnil" name:"AssociatedRHInstance"`
 
@@ -671,8 +671,8 @@ type ModifyClusterAttributesRequest struct {
 }
 
 func (r *ModifyClusterAttributesRequest) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -714,8 +714,8 @@ type ModifyClusterAttributesResponse struct {
 }
 
 func (r *ModifyClusterAttributesResponse) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -750,7 +750,7 @@ type ModifyRHInstanceAttributesRequestParams struct {
 
 type ModifyRHInstanceAttributesRequest struct {
 	*tchttp.BaseRequest
-	
+
 	// autoVoucher
 	AutoVoucher *bool `json:"AutoVoucher,omitnil" name:"AutoVoucher"`
 
@@ -774,8 +774,8 @@ type ModifyRHInstanceAttributesRequest struct {
 }
 
 func (r *ModifyRHInstanceAttributesRequest) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -816,8 +816,8 @@ type ModifyRHInstanceAttributesResponse struct {
 }
 
 func (r *ModifyRHInstanceAttributesResponse) ToJsonString() string {
-    b, _ := json.Marshal(r)
-    return string(b)
+	b, _ := json.Marshal(r)
+	return string(b)
 }
 
 // FromJsonString It is highly **NOT** recommended to use this function
@@ -901,7 +901,7 @@ type ReadOnlyRHInstance struct {
 
 	// count
 	// 注意：此字段可能返回 null，表示取不到有效值。
-	Count *int64 `json:"Count,omitnil" name:"Count"`
+	//Count *int64 `json:"Count,omitnil" name:"Count"`
 
 	// createdTime 按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
 	// 注意：此字段可能返回 null，表示取不到有效值。

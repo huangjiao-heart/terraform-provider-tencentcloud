@@ -48,7 +48,7 @@ func (me *TaasService) DescribeTaasClusterById(ctx context.Context, clusterId st
 		log.Printf("[DEBUG]%s api[%s] success, request body [%s], response body [%s]\n", logId, request.GetAction(), request.ToJsonString(), response.ToJsonString())
 
 		if response == nil || len(response.Response.InstanceSet) < 1 {
-			break
+			return
 		}
 		instances = append(instances, response.Response.InstanceSet...)
 		if len(response.Response.InstanceSet) < int(limit) {
